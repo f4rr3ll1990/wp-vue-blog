@@ -2,16 +2,12 @@
   <div id="app">
 
     <TopBar
-      @showUpdater="showUpdater = true"
+      
     />
 
     <div id="wrapper">
 
-      <Updater
-        v-if="showUpdater"
-        :error="error"
-        @close="showUpdater = false"
-      />
+
 
       <Loading
         v-if="loadingOn"
@@ -41,7 +37,7 @@
       return {
         error: '',
         loadingOn: true,
-        loadingMessage: 'Loading WP Vue',
+        loadingMessage: 'Подождите',
         loadingWheel: true,
         showUpdater: false,
         viewKey: 0,
